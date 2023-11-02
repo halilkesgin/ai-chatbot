@@ -7,6 +7,7 @@ import { Plus } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
 import AddEditNoteDialog from "@/components/add-edit-note-dialog"
+import { ModeToggle } from "@/components/mode-toggle"
 
 const Navbar = () => {
 
@@ -26,10 +27,11 @@ const Navbar = () => {
                             <Plus className="h-4 w-4 mr-2" />
                             Add Note
                         </Button>
+                        <ModeToggle />
                         <UserButton 
                             afterSignOutUrl="/"
                             appearance={{
-                                elements: { avatarBox: { width: "2.5rem", height: "2.5rem" } }
+                                elements: { avatarBox: { width: "2.5rem", height: "2.5rem", borderRadius: "10px" } }
                             }}
                         />
                     </div>
