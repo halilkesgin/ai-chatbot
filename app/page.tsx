@@ -1,8 +1,8 @@
-import Link from "next/link";
+import Link from "next/link"
+import { auth } from "@clerk/nextjs"
+import { redirect } from "next/navigation"
 
-import { Button } from "@/components/ui/button";
-import { auth } from "@clerk/nextjs";
-import { redirect } from "next/navigation";
+import { Button } from "@/components/ui/button"
 
 export default function Home() {
 

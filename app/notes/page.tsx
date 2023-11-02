@@ -1,3 +1,4 @@
+import Note from "@/components/note"
 import { db } from "@/lib/db"
 import { auth } from "@clerk/nextjs"
 
@@ -14,8 +15,15 @@ const NotesPage = async () => {
     })
 
     return (
-        <div>
-            {JSON.stringify(allNotes)}
+        <div className="grid sm:grid-cols-3 gap-3">
+            {allNotes.map((note) => (
+                <Note key={note.id} note={note} />
+            ))}
+            {allNotes.length === 0 && (
+                <div className="col-span-full text-center">
+                    You do not have any notes yet. Let's create one.
+                </div>
+            )}
         </div>
     )
 }
