@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import { useState } from "react"
 import AddEditNoteDialog from "@/components/add-edit-note-dialog"
 import { ModeToggle } from "@/components/mode-toggle"
+import AIChatButton from "@/components/ai-chat-button"
 
 const Navbar = () => {
 
@@ -27,6 +28,7 @@ const Navbar = () => {
                             <Plus className="h-4 w-4 mr-2" />
                             Add Note
                         </Button>
+                        <AIChatButton />
                         <ModeToggle />
                         <UserButton 
                             afterSignOutUrl="/"
