@@ -11,4 +11,4 @@ const pinecone = new Pinecone({
     apiKey
 })
 
-export const notesIndex = pinecone.Index("ai-chatbot")
+export const notesIndex = pinecone.Index("tester")
